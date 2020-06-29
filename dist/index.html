@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/underscore.min.js"></script>
+    <script src="scripts/backbone.js"></script>
+    <script src="scripts/bb-model.js"></script>
+    <script src="scripts/bb-router.js"></script>
+    <script src="scripts/bb-view.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="menu">
+        <ul>
+          <li><a href="#!">Start</a></li>
+          <li><a href="#!/success">Success</a></li>
+          <li><a href="#!/error">Error</a></li>
+        </ul>
+      </div>
+      <div id="block"></div>
+      <script type="text/template" id="start">
+        <div class="start">
+          <div class="userplace">
+            <label for="username">Имя пользователя:</label>
+            <input id="username" type="text">
+          </div>
+          <div class="buttonplace">
+            <input type="button" value="Проверить">
+          </div>
+        </div>
+      </script>
+      <script type="text/template" id="error">
+        <div class="error">Ошибка ! Пользователь <%= username %> не найден
+          <input class="back" type="button" value="Назад">
+        </div>
+      </script>
+      <script type="text/template" id="success">
+        <div class="success">Пользователь <%= username %> найден. Ура!
+          <input class="back" type="button" value="Назад">
+        </div>
+      </script>
+    </div>
+  </body>
+</html>

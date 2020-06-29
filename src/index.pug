@@ -1,0 +1,38 @@
+extends extends/default.pug
+
+append top-scripts
+   script(src="scripts/underscore.min.js")
+   script(src="scripts/backbone.js")
+   script(src="scripts/bb-model.js")
+   script(src="scripts/bb-router.js")
+   script(src="scripts/bb-view.js")
+
+
+block content
+   #menu
+      ul
+         li: a(href="#!") Start
+         li: a(href="#!/success") Success
+         li: a(href="#!/error") Error
+   #block
+   
+   script(type="text/template" id="start")
+      .start
+         .userplace
+            label(for="username") Имя пользователя:
+            input#username(type="text")
+         .buttonplace
+            input(type="button" value="Проверить")
+   
+   script(type="text/template" id="error")
+      .error
+         .
+            Ошибка ! Пользователь <%= username %> не найден
+         input.back(type="button" value="Назад")
+
+   script(type="text/template" id="success")
+      .success
+         .
+            Пользователь <%= username %> найден. Ура!
+         input.back(type="button" value="Назад")
+   

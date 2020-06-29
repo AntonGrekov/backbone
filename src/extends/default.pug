@@ -1,0 +1,22 @@
+block config
+	//- include ../helpers/config
+
+doctype html
+
+html(lang="ru")
+	include ../modules/head
+
+		block head
+			
+		title #{siteTitle}
+	body
+		.wrap
+			include ../modules/header
+
+			block content
+
+			include ../modules/footer
+
+		include ../modules/svg-inline
+
+		block bottom-scripts
